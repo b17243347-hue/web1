@@ -1,0 +1,126 @@
+<style>
+/* * ESTILOS CSS EXCLUSIVOS PARA ESTE FOOTER 
+ * Se asume que las variables :root (umg-rojo, umg-dorado, etc.) ya están definidas en el HEAD.
+ * Si no lo están, este CSS usará colores fijos.
+ */
+
+:root {
+    /* Definición mínima para que el footer funcione si no están en el HEAD */
+    --umg-rojo: #800000; /* CORREGIDO: Rojo Institucional UMG */
+    --umg-dorado: #ffcc00; 
+    --whatsapp-verde: #25d366; 
+    --footer-bg: #2c3e50;
+}
+
+/* Base del Footer */
+footer.custom-footer {
+    background-color: var(--footer-bg); /* Fondo Gris Oscuro */
+    color: #ecf0f1; /* Texto blanco claro */
+    text-align: center;
+    padding: 35px 0;
+    margin-top: 50px;
+    border-top: 8px solid var(--umg-rojo); /* Línea de color UMG */
+    font-size: 1em;
+    font-family: 'Verdana', 'Arial', sans-serif;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer-contenido {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+footer.custom-footer p {
+    margin: 8px 0;
+}
+
+/* Estilo para tu nombre */
+footer.custom-footer strong {
+    color: var(--umg-dorado); /* Nombre en Dorado UMG */
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+/* Contenedor para alinear los botones */
+.footer-botones {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* Estilos Comunes para Botones */
+footer.custom-footer a.whatsapp-btn,
+footer.custom-footer a.inicio-btn {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 50px; /* Forma de píldora */
+    display: inline-flex;
+    align-items: center;
+    margin: 0 7.5px; /* Margen para separar los dos botones */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white; 
+}
+
+
+/* Estilo del Botón de WhatsApp */
+footer.custom-footer a.whatsapp-btn {
+    background-color: var(--whatsapp-verde); /* Verde oficial de WhatsApp */
+}
+
+footer.custom-footer a.whatsapp-btn:hover {
+    background-color: #128c7e; /* Verde Oscuro al pasar el mouse */
+    transform: scale(1.05);
+}
+
+/* Estilo para el ícono/emoji de WhatsApp */
+.whatsapp-icon::before {
+    content: "💬"; /* Emoji de burbuja de chat */
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+/* === NUEVO ESTILO: Botón de Regreso a Inicio === */
+footer.custom-footer a.inicio-btn {
+    background-color: var(--umg-rojo); /* Rojo UMG */
+    border: 2px solid var(--umg-dorado); /* Borde dorado para contraste */
+}
+
+footer.custom-footer a.inicio-btn:hover {
+    background-color: #a00000; /* Rojo más oscuro al pasar el mouse */
+    transform: scale(1.05);
+}
+
+/* Estilo para el ícono/emoji de inicio (casa) */
+.inicio-icon::before {
+    content: "."; /* Emoji de casa */
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+</style>
+
+<footer class="custom-footer">
+    <div class="footer-contenido">
+        <p>Material de estudio de Contabilidad Administrativa.</p>
+        <p>
+            Desarrollado y Asistencia por <strong>Brandon Osbley</strong>
+        </p>
+        
+        <div class="footer-botones">
+            <a href="index.html" 
+               class="inicio-btn" 
+               aria-label="Regresar a la página de inicio">
+                <span class="inicio-icon"></span> Regresar a Inicio
+            </a>
+            
+            <a href="https://wa.me/50212345678?text=Hola%2C%20necesito%20ayuda%20con%20el%20material%20de%20Contabilidad%20Administrativa." 
+               class="whatsapp-btn" 
+               target="_blank" 
+               aria-label="Contactar a Brandon Osbley por WhatsApp">
+                <span class="whatsapp-icon"></span> Mi WhatsApp
+            </a>
+        </div>
+        
+        <p style="margin-top: 25px; opacity: 0.7; font-size: 0.9em;">&copy; 2025. Universidad Mariano Gálvez</p>
+    </div>
+</footer>
